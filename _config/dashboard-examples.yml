@@ -1,0 +1,18 @@
+---
+Name: dashboard-examples
+After:
+  - '#dashboard'
+---
+
+# -------------------------------------------------------
+# Example widget registrations
+# Comment out or remove any widgets you don't need.
+# -------------------------------------------------------
+
+Kalakotra\Dashboard\Registry\DashboardRegistry:
+  widgets:
+    - Kalakotra\Dashboard\Examples\SiteStatsWidget
+    - Kalakotra\Dashboard\Examples\AdminQuickActionsWidget
+    - Kalakotra\Dashboard\Examples\RecentMembersWidget
+    - Kalakotra\Dashboard\Examples\MemberGrowthChartWidget
+    - Kalakotra\Dashboard\Examples\SystemHealthWidget

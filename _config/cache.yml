@@ -1,0 +1,18 @@
+---
+Name: dashboard-injector
+After:
+  - '#corecache'
+---
+
+# -------------------------------------------------------
+# Bind a dedicated PSR-16 cache store for the Dashboard.
+# Uses SilverStripe's built-in file-based cache by default.
+# Replace "FileSystemCacheFactory" with Redis / Memcached
+# adapter for production systems under high load.
+# -------------------------------------------------------
+
+SilverStripe\Core\Injector\Injector:
+  Psr\SimpleCache\CacheInterface.dashboard:
+    factory: SilverStripe\Core\Cache\CacheFactory
+    constructor:
+      namespace: 'dashboard'

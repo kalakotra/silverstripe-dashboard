@@ -1,0 +1,23 @@
+{
+    "name": "kalakotra/silverstripe-dashboard",
+    "description": "Reusable, extensible Dashboard module for SilverStripe 6 CMS",
+    "type": "silverstripe-vendormodule",
+    "license": "MIT",
+    "require": {
+        "silverstripe/framework": "^6.0",
+        "silverstripe/admin": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kalakotra\\Dashboard\\": "src/"
+        }
+    },
+    "extra": {
+        "expose": [
+            "client"
+        ]
+    }
+}

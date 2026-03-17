@@ -1,0 +1,6 @@
+SilverStripe\Security\Member:
+  basic:
+    FirstName: Basic
+    Surname: User
+    Email: basic@example.com
+    Password: password

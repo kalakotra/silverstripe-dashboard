@@ -1,0 +1,37 @@
+---
+Name: dashboard
+---
+
+# -------------------------------------------------------
+# Dashboard Registry – register your widgets here
+# -------------------------------------------------------
+Kalakotra\Dashboard\Registry\DashboardRegistry:
+  widgets:
+    - Kalakotra\Dashboard\Widgets\StatsWidget
+    - Kalakotra\Dashboard\Widgets\TableWidget
+    - Kalakotra\Dashboard\Widgets\ListWidget
+    - Kalakotra\Dashboard\Widgets\ChartWidget
+    - Kalakotra\Dashboard\Widgets\ActionWidget
+    - Kalakotra\Dashboard\Widgets\NotificationWidget
+    - Kalakotra\Dashboard\Widgets\ProgressWidget
+    - Kalakotra\Dashboard\Widgets\TextWidget
+
+# -------------------------------------------------------
+# Dashboard caching defaults
+# -------------------------------------------------------
+Kalakotra\Dashboard\Services\DashboardCacheService:
+  default_lifetime: 300   # seconds (5 minutes)
+
+# -------------------------------------------------------
+# Dashboard Controller – CMS routing
+# -------------------------------------------------------
+SilverStripe\Admin\AdminRootController:
+  rules:
+    dashboard: Kalakotra\Dashboard\Controllers\DashboardController
+
+# -------------------------------------------------------
+# BuildTask registration
+# -------------------------------------------------------
+SilverStripe\Dev\TaskRunner:
+  tasks:
+    - Kalakotra\Dashboard\Tasks\DashboardCacheFlushTask
