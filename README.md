@@ -64,7 +64,8 @@ silverstripe-dashboard/
     │   ├── RecentMembersWidget.php
     │   ├── MemberGrowthChartWidget.php
     │   ├── AdminQuickActionsWidget.php
-    │   └── SystemHealthWidget.php
+    │   ├── SystemHealthWidget.php
+    │   └── ServerLogStatsWidget.php
     │
     └── Tests/
         └── DashboardRegistryTest.php
@@ -191,6 +192,21 @@ Override `getNotifications(): array`. Supports AJAX refresh.
 ### `ProgressWidget`
 Labelled progress bars with semantic colour states.  
 Override `getBars(): array`.
+
+### `ServerLogStatsWidget` (example)
+Reads server access logs and shows requests, unique IPs, top URL, and error totals.
+
+Config options:
+- Environment variable: `DASHBOARD_ACCESS_LOG=/absolute/path/to/access.log`
+- YAML override:
+
+```yaml
+Kalakotra\Dashboard\Examples\ServerLogStatsWidget:
+    log_paths:
+        - '/var/log/nginx/access.log'
+        - '/var/log/apache2/access.log'
+    max_lines: 5000
+```
 
 ### `TextWidget`
 Static HTML/text block.  

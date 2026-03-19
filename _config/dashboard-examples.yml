@@ -16,3 +16,4 @@ Kalakotra\Dashboard\Registry\DashboardRegistry:
     - Kalakotra\Dashboard\Examples\RecentMembersWidget
     - Kalakotra\Dashboard\Examples\MemberGrowthChartWidget
     - Kalakotra\Dashboard\Examples\SystemHealthWidget
+    - Kalakotra\Dashboard\Examples\ServerLogStatsWidget
